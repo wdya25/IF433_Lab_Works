@@ -1,8 +1,8 @@
 package oop_127376_WidyaAyuSafitri.week01
 
 fun main() {
-    var name: String = "Widya Ayu Safitri"
-    var score: Int = 80
+    val name = "Widya Ayu Safitri"
+    val score = 80
 
-    println("Nama:" + name + ", Nilai: " +score)
+    println("Nama: $name, Nilai: $score")
  }
