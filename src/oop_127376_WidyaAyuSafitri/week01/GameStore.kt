@@ -5,9 +5,13 @@ fun main () {
     val price = 750000
     val finalPrice = calculateDiscount(price)
     println("Game store: SteamKW")
-    println("Game: $gameTitle")
     println("Price: $price")
-    println("Final Price: $finalPrice")
+    printReceipt(title = gameTitle, finalPrice = finalPrice)
 }
 
 fun calculateDiscount(price: Int) = if (price > 500000) price - (price * 20/100) else price - (price * 10 / 100)
+fun printReceipt(title: String, finalPrice: Int) {
+    println("====== struk pembelian =======")
+    println("Game: $title")
+    println("Final Price: $finalPrice")
+}
