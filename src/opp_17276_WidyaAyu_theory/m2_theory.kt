@@ -1,4 +1,4 @@
-package opp_17276_WidyaAyu_week2
+package opp_17276_WidyaAyu_theory
 
 class pemain  {
     var nama:String = "tidak terdaftar";
