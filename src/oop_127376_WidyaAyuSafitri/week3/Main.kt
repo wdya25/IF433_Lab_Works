@@ -19,4 +19,5 @@ fun main() {
     weapon.damage = 9999
     println("Damage saat ini: ${weapon.damage}")
     println("Tier: ${weapon.tier}")
+
 }
