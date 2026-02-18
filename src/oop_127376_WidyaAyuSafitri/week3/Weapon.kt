@@ -12,7 +12,7 @@ class Weapon(
                     println("EROR: Damage tidak boleh negatif! Nilai damage tetap $_damage")
                 }
                 value > 1000 -> {
-                    println("Damage terlalu tinggi/overpowered, diset ke maksimum 1000")
+                    println("Damage overpowered")
                     _damage = 1000
                 }
                 else -> {
