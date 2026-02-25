@@ -1,4 +1,7 @@
 package oop_127376_WidyaAyuSafitri.` week04`
 
-class Developer {
+class Developer(name: String, baseSalary: Int, val programmingLanguage: String) : Employee(name, baseSalary) {
+override fun work() {
+        println("$name sedang ngoding menggunakan $programmingLanguage.")
+    }
 }
