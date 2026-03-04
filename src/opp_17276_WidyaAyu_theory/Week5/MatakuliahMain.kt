@@ -1,9 +1,13 @@
 package opp_17276_WidyaAyu_theory.Week5
 
 fun main(){
-    val wjb = Wajib();
-    wjb.set_matkul(3);
+    val listMatkul:List<Matakuliah> = listOf(
+        Wajib(),
+        Elective()
+    );
+    println("banyak tipe matkul: ${listMatkul}");
 
-    val elc = Elective();
-    elc.set_matkul(2);
+    for (mku in listMatkul) {
+        mku.set_matkul(3);
+    }
 }
