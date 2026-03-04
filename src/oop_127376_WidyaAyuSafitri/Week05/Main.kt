@@ -46,4 +46,21 @@ fun main() {
         metode.processPayment(75000.0)
         println()
     }
+     println("--- smart casting challenge ---")
+    for (metode in daftarPembayaran) {
+        when (metode) {
+            is EWallet -> {
+                println("EWallet terdeteksi, top up Rp 50,000")
+                metode.topUp(50000.0)
+                metode.processPayment(75000.0)
+            }
+            is CreditCard -> {
+                println("Credit Card terdeteksi, tidak perlu top up")
+            }
+        }
+        println()
+    }
+    println("Status Akhir:")
+    println("EWallet: Rp ${ewallet.balance}")
+    println("Credit Card: Rp ${creditCard.usedAmount}/Rp ${creditCard.limit}")
 }
