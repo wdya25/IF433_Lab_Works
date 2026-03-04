@@ -6,4 +6,8 @@ class Elective: Matakuliah() {
         println("Elective ${super.nama} sks $sks")
     }
 
+    fun ada_praktek(){
+        println("WAJIB Di praktekin")
+    }
+
 }
