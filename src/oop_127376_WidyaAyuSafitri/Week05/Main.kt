@@ -23,4 +23,13 @@ fun main() {
         }
         println("--------------------------------")
     }
+
+    println("==== Tugas mandiri 1 ===")
+    val mathHelper = MathHelper()
+    val luasPersegi = mathHelper.hitungluas(5)
+    println("Luas persegi: $luasPersegi")
+    val luasPersegiPanjang = mathHelper.hitungluas (8,4)
+    println("Luas persegi Panjang: $luasPersegiPanjang")
+    val luasLingkaran =mathHelper.hitungluas (7.0)
+    println("Luas Lingkaran: $luasLingkaran")
 }
