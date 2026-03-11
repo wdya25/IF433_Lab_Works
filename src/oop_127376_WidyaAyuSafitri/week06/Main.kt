@@ -34,6 +34,12 @@ fun main() {
         id = "CCTV-003",
         name = "Ezviz Garasi"
     )
+    val hub = SmartHomeHub()
+    hub.addDevice(lampuRuangTamu)
+    hub.addDevice(speakerDapur)
+    hub.addDevice(cctvGarasi)
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 
     println("\n=== Daftar Perangkat SmartHome ===")
     println("SmartLamp: ${lampuRuangTamu.name} (${lampuRuangTamu.id})")
