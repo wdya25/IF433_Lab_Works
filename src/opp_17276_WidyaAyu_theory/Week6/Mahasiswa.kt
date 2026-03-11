@@ -15,4 +15,9 @@ class Mahasiswa(
     override fun penilaian(){
         println("Nilai $namaMK adalah $nilaiMK");
     }
+
+    override fun keaktifan(){
+        super<KelasMK>.keaktifan();
+        super<Organisasi>.keaktifan();
+    }
 }

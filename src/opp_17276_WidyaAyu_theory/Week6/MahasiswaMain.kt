@@ -8,7 +8,6 @@ fun main(){
         namaMK = "OOP",
         nilaiMK = 89,)
     mhs.rapat();
-    mhs.penilaian()
-
-
+    mhs.penilaian();
+    mhs.keaktifan();
 }

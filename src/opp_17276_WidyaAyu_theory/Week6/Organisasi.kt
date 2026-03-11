@@ -8,4 +8,7 @@ interface Organisasi {
         get() = budgetRapat * jmlOrg;
 
     fun rapat();
+    fun keaktifan() {
+        println("Ih kamu aktif");
+    }
 }

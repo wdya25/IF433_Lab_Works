@@ -4,4 +4,8 @@ interface KelasMK {
     val namaMK: String;
     val nilaiMK: Int;
     fun penilaian();
+
+    fun keaktifan() {
+        println("ih kamu bawel");
+    }
 }
