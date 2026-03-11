@@ -1,4 +1,7 @@
 package oop_127376_WidyaAyuSafitri.week06
 
-class Button {
+class Button(override val name: String) : Clickable {
+    override fun click() {
+        println("Tombol '$name' berhasil diklik!")
+    }
 }
