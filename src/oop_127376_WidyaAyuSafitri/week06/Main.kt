@@ -19,4 +19,24 @@ fun main() {
     println("\n===  TESTING CHEACKOUT ==")
     processCheackout(method = pay1, amount = 50000.0)
     processCheackout(method = pay2, amount = 150000.0)
+
+    val lampuRuangTamu = SmartLamp(
+        id = "LMP-001",
+        name = "Ruang Tamu"
+    )
+
+    val speakerDapur = SmartSpeaker(
+        id = "SPK-002",
+        name = "Google Nest Dapur"
+    )
+
+    val cctvGarasi = SmartCCTV(
+        id = "CCTV-003",
+        name = "Ezviz Garasi"
+    )
+
+    println("\n=== Daftar Perangkat SmartHome ===")
+    println("SmartLamp: ${lampuRuangTamu.name} (${lampuRuangTamu.id})")
+    println("SmartSpeaker: ${speakerDapur.name} (${speakerDapur.id})")
+    println("SmartCCTV: ${cctvGarasi.name} (${cctvGarasi.id})")
 }
