@@ -10,7 +10,7 @@ fun processEvent(event: BattleState) {
         }
         is BattleState.LootDropped -> {
             println("Loot ditemukan: ${event.item.name} (Damage: ${event.item.damage}, Rarity: ${event.item.rarity})")
-            println("   Drop chance untuk rarity ini: ${event.item.rarity.dropChance}%")
+            println("Drop chance untuk rarity ini: ${event.item.rarity.dropChance}%")
         }
         is BattleState.GameOver -> {
             println("GAME OVER: ${event.reason}")
