@@ -36,4 +36,9 @@ fun main () {
         ApiResponse.Loading -> "Data berhasil ditarik"
     }
     println(uiMessage)
+
+    println("\nTesting GameManager Singleton:")
+    GameManager.startGame()
+    GameManager.startGame()
+
 }
