@@ -25,7 +25,7 @@ fun main (){
 
     //looping buat munculin semuanya
     for (matkul in MataKuliah.entries) {
-        println("matkul:" + matkul);
+        print("matkul:" + matkul);
         matkul.sks_matkul();
     }
 }
