@@ -5,7 +5,7 @@ class NetworkClient private constructor(val url: String) {
         const val BASE_URL = "https://api.umn.ac.id"
         fun createClient() : NetworkClient {
             println("Membangun networkClient dengan Base_URL: $BASE_URL")
-            return NetworkClient($BASE_URL)
+            return NetworkClient(BASE_URL)
         }
     }
     fun connect() {
