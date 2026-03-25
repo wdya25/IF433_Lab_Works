@@ -37,8 +37,12 @@ fun main () {
     }
     println(uiMessage)
 
-    println("\nTesting GameManager Singleton:")
+    println("\n=== Tugas mandiri ===")
+    println("Testing GameManager Singleton:")
     GameManager.startGame()
     GameManager.startGame()
-
+    println("Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
+    println("Forging Starter Sword:")
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Hasil forge: $starterWeapon")
 }
