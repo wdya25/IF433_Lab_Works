@@ -18,4 +18,14 @@ fun main (){
     // cara ambil data satu satu -persatu field
     println("Nma dosen1: ${dsn1.nama} masuk tahun ${dsn1.tahunMasuk}");
 
+    // call ENUM class
+    println("Matakuliah fav saya :" + MataKuliah.OOP.name);
+    println("Index matkul: " + MataKuliah.OOP.ordinal); //ordinal kaya index jadi bisa di pake bisa tidak
+    MataKuliah.OOP.sks_matkul();
+
+    //looping buat munculin semuanya
+    for (matkul in MataKuliah.entries) {
+        println("matkul:" + matkul);
+        matkul.sks_matkul();
+    }
 }
