@@ -8,4 +8,10 @@ fun main (){
     } catch(ex:Exception) { //sama aja kalau pakai NullPointerexception (handel hanya null sedangkan itu dia menghandel eror keseluruhan )
         println("errornya adalah  ${ex.message}");
     }
+
+    var dataMhs: List<Any> = listOf(123,"han", 89,"tangerang"); // campuran anatara int dan string
+    for (item in dataMhs) {
+        var itemFilter = item as? String;
+        println(itemFilter);
+    }
 }
