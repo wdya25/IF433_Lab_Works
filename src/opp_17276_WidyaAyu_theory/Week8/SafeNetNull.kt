@@ -12,6 +12,9 @@ fun main (){
     var dataMhs: List<Any> = listOf(123,"han", 89,"tangerang"); // campuran anatara int dan string
     for (item in dataMhs) {
         var itemFilter = item as? String;
-        println(itemFilter);
+        if (itemFilter!= null) {
+            println(itemFilter);
+        }
+
     }
 }
