@@ -33,3 +33,4 @@ fun main (){
     val safeString = someObject as? String?: "Unknown String"
     println("Hasil cast + falllback: $safeString")
 }
+//initesting
