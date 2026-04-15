@@ -5,7 +5,9 @@ class Mahasiswa(val nim:String, val addr: Alamat?); // disini juga pakai ?
 
 fun main () {
     val almt = Alamat(nomor = 47, kota = "Tangerang");
-    val mhs = Mahasiswa(nim = "12345", addr = null); // mau addr null maka
+    val mhs = Mahasiswa(nim = "12345", addr = almt);
 
-    println("Nimnya ${mhs.nim} tinggalnya di ${mhs.addr?.kota}") // disinipakai safe ?.
+    val defaulAlamat = mhs.addr?:"Gak jelas , ga tau dimana "
+
+    println("Nimnya ${mhs.nim} tinggalnya di ${defaulAlamat}") // disinipakai ganti
 }
