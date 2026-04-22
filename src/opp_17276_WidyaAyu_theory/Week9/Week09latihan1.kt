@@ -23,5 +23,7 @@ fun main(){
 
     println("=========== set of imut=========");
     val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan
+    println("banyak nilai : ${arNilai.size}"); // kenapa 6 karena kalau dobel kebaca 1kali
+    println("ada, angka 90 gak ? ${arNilai.contains(90)}");
     println(arNilai);
 }
