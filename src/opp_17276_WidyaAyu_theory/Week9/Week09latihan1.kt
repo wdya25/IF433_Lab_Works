@@ -1,7 +1,7 @@
 package opp_17276_WidyaAyu_theory.Week9
 
 fun main(){
-    println("===============List OF==========")
+    println("===============List OF imut ==========")
     val arSiswa =listOf("budi", "Danu", "susi", "cica"); //gakwajib ar
     //view
     println(arSiswa); //bentuknya masih object -> array
@@ -20,4 +20,8 @@ fun main(){
     arMatkul[2] = "Aljabar  Linear"; //buat edit atau ngubah
     arMatkul.remove(element = "pemweb "); //buat remove
     println(arMatkul);
+
+    println("=========== set of imut=========");
+    val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan
+    println(arNilai);
 }
