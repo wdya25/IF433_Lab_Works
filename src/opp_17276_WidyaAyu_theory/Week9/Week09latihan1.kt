@@ -22,13 +22,13 @@ fun main(){
     println(arMatkul);
 
     println("=========== set of imut=========");
-    val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan
+    val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan (inter)
     println("banyak nilai : ${arNilai.size}"); // kenapa 6 karena kalau dobel kebaca 1kali
     println("ada, angka 90 gak ? ${arNilai.contains(90)}");
     println(arNilai);
 
     println("=========== set of mutable =======");
-    val arMahasiswa = mutableSetOf("Andi", "yanto", "udin", "yuda");
+    val arMahasiswa = mutableSetOf("Andi", "yanto", "udin", "yuda"); // tipe data string
     arMahasiswa.add("yanti");
     arMahasiswa.remove("udin");
     arMahasiswa.add("udin"); // udin akan ditaro di sebelah yanti karena baru di add
