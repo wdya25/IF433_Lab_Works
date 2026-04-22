@@ -32,4 +32,5 @@ fun main(){
     worstPerformersString.forEach { println(it) }
     println("\n--- TRADED PAIRS ---")
     println(uniquePairs)
+    //sudah diuji
 }
