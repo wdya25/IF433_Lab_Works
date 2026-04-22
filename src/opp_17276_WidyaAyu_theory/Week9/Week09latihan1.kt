@@ -26,4 +26,11 @@ fun main(){
     println("banyak nilai : ${arNilai.size}"); // kenapa 6 karena kalau dobel kebaca 1kali
     println("ada, angka 90 gak ? ${arNilai.contains(90)}");
     println(arNilai);
+
+    println("=========== set of mutable =======");
+    val arMahasiswa = mutableSetOf("Andi", "yanto", "udin", "yuda");
+    arMahasiswa.add("yanti");
+    arMahasiswa.remove("udin");
+    arMahasiswa.add("udin"); // udin akan ditaro di sebelah yanti karena baru di add
+    println(arMahasiswa);
 }
