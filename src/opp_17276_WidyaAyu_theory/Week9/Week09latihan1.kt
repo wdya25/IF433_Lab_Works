@@ -47,4 +47,13 @@ fun main(){
     println(arResto);
 
     println("=========== map mutable =======");
+    val arKHS = mutableMapOf(
+        "toni" to 80,
+        "nika" to 85,
+        "ara" to 87,
+        "davin" to 90
+    );
+    arKHS.remove("ara");
+    arKHS["nika"] = 92 ;
+    println(arKHS);
 }
