@@ -22,7 +22,7 @@ fun main(){
     println(arMatkul);
 
     println("=========== set of imut=========");
-    val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan (inter)
+    val arNilai = setOf(80,90,75,85,80,30,50,85); // dia kaya kalau ada yang dobel akan dihilangkan (int)
     println("banyak nilai : ${arNilai.size}"); // kenapa 6 karena kalau dobel kebaca 1kali
     println("ada, angka 90 gak ? ${arNilai.contains(90)}");
     println(arNilai);
@@ -33,4 +33,18 @@ fun main(){
     arMahasiswa.remove("udin");
     arMahasiswa.add("udin"); // udin akan ditaro di sebelah yanti karena baru di add
     println(arMahasiswa);
+
+    println("=========== map imut =======");
+    val arResto = mapOf(
+        "Ayam" to 5000,
+        "bakpao" to 3000,
+        "sayur asam" to 2500,
+    );
+    println("banyak menu ${arResto.size}");
+    println("Harga ayam ${arResto["Ayam"]}");
+    println("list makanan: ${arResto.keys}");
+    println("list harga : ${arResto.values}");
+    println(arResto);
+
+    println("=========== map mutable =======");
 }
