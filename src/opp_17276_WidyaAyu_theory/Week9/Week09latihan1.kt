@@ -11,6 +11,13 @@ fun main(){
     println("siswa bernama ${arSiswa[1]}"); //karena [1]
     //munculin semua orang -> for each
     for (a in arSiswa) {
-        print(a);
+        println(" siswa " + a + " dan ");
     }
+
+    println("==========list of mutable =======");
+    val arMatkul = mutableListOf("OOP", "pemweb","matdis", "kalkulus" );
+    arMatkul.add( "ALGO" ); // add
+    arMatkul[2] = "Aljabar  Linear"; //buat edit atau ngubah
+    arMatkul.remove(element = "pemweb "); //buat remove
+    println(arMatkul);
 }
