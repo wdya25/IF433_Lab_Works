@@ -55,5 +55,6 @@ fun main(){
     );
     arKHS.remove("ara");
     arKHS["nika"] = 92 ;
+    arKHS["selena"] = 99 ; // buat add
     println(arKHS);
 }
