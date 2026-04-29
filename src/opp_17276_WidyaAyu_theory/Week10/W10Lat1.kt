@@ -16,7 +16,22 @@ fun <T> Password(isiPass:T):T {
     return isiPass;
 }
 
+//code generic - funtion ada contraint(ini gabung fun dan classnya)
+class kalkulator<T: Number> (val a:T, val b:T) {
+    fun tambah(): Int {
+        return a.toInt() + b.toInt();
+    }
+    fun kurang(): Double {
+        return a.toDouble() - b.toDouble();
+    }
+}
+
 fun main() { // INI BUAT IMPLEMENTASINYA
+    println("====== Generic - constraint =====")
+    val kalk = kalkulator(a=10.52, b=20.347);
+    println("Penambahan  ${kalk.a} ditambah ${kalk.b}: " + kalk.tambah())
+    println("Pengurngan  ${kalk.a} ditambah${kalk.b}: " + kalk.kurang())
+
     println("====== generic funtion =======")
     println("passsowrd kamu: " + Password(isiPass = 1234))
 
