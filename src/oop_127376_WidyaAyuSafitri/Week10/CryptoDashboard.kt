@@ -9,8 +9,11 @@ fun main() {
     println("Coin Repository berhasil diinisialisasi!")
     println("Jumlah koin saat ini: ${coinRepo.getAll().size}")
 
-    println("\nDaftar Koin di Wallet:")
-    coinRepo.getAll().forEach { coin ->
+    val response = ApiResponse("200 OK", coinRepo.getAll())
+    println("\n=== API Response ===")
+    println("Status : ${response.status}")
+    println("Data yang diterima:")
+    response.data.forEach { coin ->
         println("• ${coin.name} : ${coin.balance}")
     }
 }
