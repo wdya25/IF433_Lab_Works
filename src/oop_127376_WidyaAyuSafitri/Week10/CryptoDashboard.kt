@@ -8,6 +8,7 @@ fun main() {
     coinRepo.add(Coin("USDT", 1250.0))
     println("Coin Repository berhasil diinisialisasi!")
     println("Jumlah koin saat ini: ${coinRepo.getAll().size}")
+
     val response = ApiResponse("200 OK", coinRepo.getAll())
 
     println("\n=== API Response ===")
