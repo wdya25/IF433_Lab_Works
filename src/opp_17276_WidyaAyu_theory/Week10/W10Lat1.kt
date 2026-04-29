@@ -2,18 +2,27 @@ package opp_17276_WidyaAyu_theory.Week10
 
 import opp_17276_WidyaAyu_theory.Week8.Alamat
 
-//code non
+//code non- generic
 class rumah (val alamat: Any)
 
 /// code generic
 class kampus<T>(val alamat: T);
 
+//code generic - multi parameter
+class Komputer<T,V>(val merk: T, val barcode:V ) // pakai t dua duanya bolhe
+
 fun main() {
-    println("===== SAMPLE NONGENERIC=======");
-    val rmh = rumah(alamat = "gading serpong");
-    println(rmh.alamat)
+    println("===== generic multi parameter===");
+    val komp = Komputer(merk= " Dell", barcode = 12345);
+    println("Merk komputer :" + komp.merk)
+    println("barcode komputer  :${komp.barcode}")
+
+    println("===== SAMPLE NON-GENERIC=======");
+    val rmh = rumah(alamat = 200);
+    val angkaRumah = rmh.alamat as Int
+    println(rmh.alamat + 50)
 
     println("===== SAMPLE GENERIC ======");
-    val kmps = kampus(alamat = "Tangerang");
-    println(kmps.alamat)
+    val kmps = kampus(alamat = 300);
+    println(kmps.alamat + 50)
 }
