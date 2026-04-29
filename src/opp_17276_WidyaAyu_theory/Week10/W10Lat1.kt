@@ -11,7 +11,15 @@ class kampus<T>(val alamat: T);
 //code generic - multi parameter
 class Komputer<T,V>(val merk: T, val barcode:V ) // pakai t dua duanya bolhe
 
-fun main() {
+//code generic - funtion
+fun <T> Password(isiPass:T):T {
+    return isiPass;
+}
+
+fun main() { // INI BUAT IMPLEMENTASINYA
+    println("====== generic funtion =======")
+    println("passsowrd kamu: " + Password(isiPass = 1234))
+
     println("===== generic multi parameter===");
     val komp = Komputer(merk= " Dell", barcode = 12345);
     println("Merk komputer :" + komp.merk)
