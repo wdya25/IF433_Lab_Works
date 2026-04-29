@@ -26,7 +26,18 @@ class kalkulator<T: Number> (val a:T, val b:T) {
     }
 }
 
+//generic - where
+fun <T> penilaian(list : List<T>, kkm:T):List <T> where T: Comparable<T> {
+    return list.filter { it>= kkm }
+}
+
 fun main() { // INI BUAT IMPLEMENTASINYA
+    println("====== Generic Where ======")
+    val daftarNilai = listOf(60,71,90,83, 73, 67,55,84,72)
+    println("daftar nilai :" + daftarNilai)
+    val nilaiAtasKkm = penilaian(daftarNilai, kkm=70)
+    println("nilai diatas kkm : " + nilaiAtasKkm)
+
     println("====== Generic - constraint =====")
     val kalk = kalkulator(a=10.52, b=20.347);
     println("Penambahan  ${kalk.a} ditambah ${kalk.b}: " + kalk.tambah())
