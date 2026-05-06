@@ -46,4 +46,10 @@ fun main() {
         sumOf { it.powerLoad }
     }
     println("\nTotal daya terpakai: $totalPower Watt")
+    println("\n=== STATUS SEMUA PERANGKAT ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
+
+    println("\nSmart Home Configuration Pipeline selesai!")
 }
