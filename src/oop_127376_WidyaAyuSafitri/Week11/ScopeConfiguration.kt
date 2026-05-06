@@ -3,7 +3,7 @@ package oop_127376_WidyaAyuSafitri.Week11
 data class User(var name: String = " ", var age: Int = 0)
 
 fun main(){
-    println("=== TEST APPLY ===")
+    println("=== TEST APPLY ===")// maaf kak lupa commit ini tadi
    val user = User().apply {
         name = "Alex"
         age = 25
