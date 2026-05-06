@@ -13,6 +13,15 @@ fun main() {
     }.also {
         homeDevices.add(it)
     }
+    SmartDevice("Ezviz Outdoor", "Camera")
+        .apply {
+            isOnline = true
+            powerLoad = 5
+        }
+        .also {
+            println("(LOG) Kamera terhubung")
+            homeDevices.add(it)
+        }
     println("Lampu Philips WiZ berhasil dikonfigurasi dan ditambahkan")
     println("Jumlah perangkat saat ini: ${homeDevices.size}")
 }
