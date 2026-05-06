@@ -1,3 +1,19 @@
 package oop_127376_WidyaAyuSafitri.Week11
 
 data class User(var name: String = " ", var age: Int = 0)
+
+fun main(){
+    println("=== TEST APPLY ===")
+   val user = User().apply {
+        name = "Alex"
+        age = 25
+   }
+    println(user)
+    println("\n=== TEST ALSO ===")
+    val numbers = mutableListOf(1, 2, 3)
+    numbers.also {
+        println("Log Sebelum ditambah: $it")
+        it.add(4)
+        println("Setelah ditambah: $numbers")
+    }
+}
