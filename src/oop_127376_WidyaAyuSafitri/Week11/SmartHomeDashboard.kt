@@ -38,8 +38,8 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
-
-    println(" AC dan Auto Feeder berhasil dikonfigurasi")
-    println("Lampu Philips WiZ berhasil dikonfigurasi dan ditambahkan")
-    println("Jumlah perangkat saat ini: ${homeDevices.size}")
+    with(homeDevices) {
+        println("Total perangkat terdaftar: ${this.size}")
+        println("Semua perangkat berhasil dikonfigurasi!")
+    }
 }
