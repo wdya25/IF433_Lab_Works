@@ -60,7 +60,7 @@ fun contoh_multiple_catch(nilai: String){
 }
 
 fun main (){
-    contoh_multiple_catch("50")// buat si multiple catch
+    contoh_multiple_catch("syududu")// buat si multiple catch
     //panggil class Custom Exception Classes
     val nsiswa = input_nilai_siswa(kkm = 70)
     try{
