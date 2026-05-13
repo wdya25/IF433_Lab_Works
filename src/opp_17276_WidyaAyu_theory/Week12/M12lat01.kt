@@ -59,8 +59,30 @@ fun contoh_multiple_catch(nilai: String){
         println("error program:  ${e.message}")
     }
 }
+// Multiple catch Blocks
+sealed class ATMException(pesan: String): Exception(pesan);
+class saldo_dibawah_nol(val saldoKamu: Int):
+    ATMException(pesan = "Masa Saldo $saldoKamu minus")
+class cek_jumlah_saldo(val saldoAwal: Int, val jajan: Int):
+        ATMException(pesan = "saldo tinggal $saldoAwal, kamu jajan $jajan, gak cukup")
+fun mulai_jajan(saldoAwalKamu : Int, jajanKamu: Int): Int{
+    if (saldoAwalKamu > jajanKamu){
+        throw cek_jumlah_saldo(saldoAwalKamu, jajanKamu)
+    } else if (saldoAwalKamu < 0){
+        throw saldo_dibawah_nol(saldoAwalKamu)
+    }else {
+        println("Transaksi berhasill")
+    }
+    return saldoAwalKamu - jajanKamu
+}
 
 fun main (){
+    //panggil catch bloks
+    runCatching { mulai_jajan(1000, 1000) } // runcatch sama kaya try
+        .onSuccess { println("transaksi sukses : $it") } // ibarat di  bagian try{ '' disininya  dan sukses dia jalananin "return saldoAwalKamu - jajanKamu"
+        .onFailure { println("transaksi gagal: $it") } // ini ibarat bagian catch nya
+
+
     contoh_multiple_catch("100")// buat si multiple catch
     //panggil class Custom Exception Classes
     val nsiswa = input_nilai_siswa(kkm = 70)
