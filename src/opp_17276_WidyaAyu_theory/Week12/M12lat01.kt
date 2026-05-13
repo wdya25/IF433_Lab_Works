@@ -14,7 +14,7 @@ fun pembagian (pembilang: Int, penyebut: Int){
 //Exception - expression - tipe data
 fun cek_tipe_data(){
     var angka:Int = try {
-        Integer.parseInt( "10") // ini harus kasih angka kalau pakai huruf egak
+        Integer.parseInt( "adadssad") // ini harus kasih angka kalau pakai huruf egak
     } catch (e: Exception) {
         println("ada error di Cek tipe data ${e.message}")
         111
