@@ -31,7 +31,24 @@ fun cek_saldo(saldoSaya: Int){
     }
 }
 
+//Custom Exception Classes
+class CekNilaiKkm (val kkm: Int, val nilai: Int): Exception("Nilai $nilai berada di bawah kkm $kkm")
+
+class input_nilai_siswa(val kkm: Int){
+    fun input_nilai(nilaiKamu : Int){ //fun gak boleh pakai val
+        if (nilaiKamu < kkm){
+            throw CekNilaiKkm(kkm, nilaiKamu)
+        } else {
+            println("kamu lulus, dengan nilai $nilaiKamu")
+        }
+    }
+}
+
 fun main (){
+    //panggil class Custom Exception Classes
+    val nsiswa = input_nilai_siswa(kkm = 70)
+    nsiswa.input_nilai(nilaiKamu = 71)
+
     // coba throw
     try {
         cek_saldo(saldoSaya = 990)
