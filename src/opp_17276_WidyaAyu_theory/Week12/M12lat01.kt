@@ -48,8 +48,9 @@ class input_nilai_siswa(val kkm: Int){
 fun contoh_multiple_catch(nilai: String){
     try {
         val angka = Integer.parseInt( nilai)
-        val hasil = angka/0
+        val hasil = angka/2
         println("nilai nilainya : $hasil")
+        cek_saldo(100)
     } catch (e: NumberFormatException) {
         println("error salah format ${e.message}")
     }catch (e: ArithmeticException){
