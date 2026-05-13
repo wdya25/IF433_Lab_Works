@@ -31,4 +31,11 @@ fun main() {
     }
 
     println("Stok setelah jadwal pagi: $currentKibbleStock gr")
+    val result = runCatching { dispenseKibble(
+            requestedGram = 30,
+            availableGram = 1000,
+            isJammed = false
+        )
+    }
+    println("Hasil runCatching: $result")
 }
