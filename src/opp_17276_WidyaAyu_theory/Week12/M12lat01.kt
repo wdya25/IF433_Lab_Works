@@ -47,7 +47,11 @@ class input_nilai_siswa(val kkm: Int){
 fun main (){
     //panggil class Custom Exception Classes
     val nsiswa = input_nilai_siswa(kkm = 70)
-    nsiswa.input_nilai(nilaiKamu = 71)
+    try{
+        nsiswa.input_nilai(nilaiKamu = 60)
+    } catch (e: CekNilaiKkm){
+        println("ada eroro saat input nilai ${e.message}")
+    }
 
     // coba throw
     try {
