@@ -44,7 +44,23 @@ class input_nilai_siswa(val kkm: Int){
     }
 }
 
+// mulatiple catch
+fun contoh_multiple_catch(nilai: String){
+    try {
+        val angka = Integer.parseInt( nilai)
+        val hasil = angka/2
+        println("nilai nilainya : $hasil")
+    } catch (e: NumberFormatException) {
+        println("error salah format ${e.message}")
+    }catch (e: ArithmeticException){
+        println("error keslahan aritmatika  ${e.message}")
+    }catch (e: Exception){
+        println("error program:  ${e.message}")
+    }
+}
+
 fun main (){
+    contoh_multiple_catch("50")// buat si multiple catch
     //panggil class Custom Exception Classes
     val nsiswa = input_nilai_siswa(kkm = 70)
     try{
