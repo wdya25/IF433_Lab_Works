@@ -37,5 +37,7 @@ fun main() {
             isJammed = false
         )
     }
-    println("Hasil runCatching: $result")
-}
+    result.onSuccess { newStock ->
+        currentKibbleStock = newStock
+        println("Makan sore sukses! Sisa stok kibble: $currentKibbleStock gr")
+    }}
