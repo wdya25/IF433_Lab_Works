@@ -33,7 +33,12 @@ fun cek_saldo(saldoSaya: Int){
 
 fun main (){
     // coba throw
-    cek_saldo(saldoSaya = 1200) //kalau angka di bawah 1000 dia akan eror dan program akan crash
+    try {
+        cek_saldo(saldoSaya = 990)
+    } catch (e: Exception) {
+        println("error di throw: ${e.message}") //pakai try catch untuk solusi dari eror
+    }
+
     //Exception -expression
     cek_tipe_data()// harus ada agar bisa jalan
     pembagian (pembilang = 10, penyebut = 0)
