@@ -1,5 +1,6 @@
 package oop_127376_WidyaAyuSafitri.Week13
 import java.io.File
+import java.io.FileNotFoundException
 
 data class TradeRecord(
     val id: Int,
@@ -31,5 +32,14 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
         trades.forEach { trade ->
             writer.println(trade.toCsv())
         }
+    }
+}
+fun loadTrades(path: String): List<TradeRecord> {
+    return try {
+        File(path).readLines()
+            .mapNotNull { fromCsvTrade(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error: File tidak ditemukan!")
+        emptyList()
     }
 }
