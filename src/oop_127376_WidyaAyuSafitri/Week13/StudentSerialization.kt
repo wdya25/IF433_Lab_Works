@@ -13,3 +13,17 @@ fun fromCSV(line: String): Student {
         gpa = parts[2].toDouble()
     )
 }
+fun saveStudents(students: List<Student>, path: String) {
+    File(path).writeText(
+        students.joinToString(separator = "\n") { it.toCSV() }
+    )
+}
+
+fun loadStudents(path: String): List<Student> {
+    return try {
+        File(path).readLines().map { fromCSV(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error: File tidak ditemukan!")
+        emptyList()
+    }
+}
