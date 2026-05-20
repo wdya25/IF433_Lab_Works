@@ -58,4 +58,5 @@ fun main() {
     println("\n=== LOADED TRADE DATA ===")
     loaded.forEach { println(it) }
     val totalPnl = loaded.sumOf { it.pnl }
+    println("\n==== TOTAL PnL BERSIH: $totalPnl ====")
 }
